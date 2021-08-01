@@ -13,8 +13,8 @@ Every 20 seconds, check for mentions in mentions_timeline. If found, reply to th
 
 **Make sure you have installed the *Python interpreter* and had a [Twitter developer account](https://developers.twitter.com) before continuing**
 
-***Do this first:*** Open [config.py](https://github.com/tlegx/alt_case_bot_twitter/blob/master/config.py) and replace the "consumer_key", "consumer_secret", "access_token" and "access_token_secret" string data to your own.
-Navigate to the directory you downloaded this and simply type:
+***Do this first:*** Open [config.py](https://github.com/tlegx/alt_case_bot_twitter/blob/master/config.py) and replace the "consumer_key", "consumer_secret", "access_token" and "access_token_secret" string data to your own.</br>
+Then, navigate to the directory you downloaded this and simply type:
 ```
 python main.py
 ```
