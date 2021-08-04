@@ -27,12 +27,13 @@ def check_mentions(api, keywords, since_id):
         else:
             if any(keyword in tweet.text.lower() for keyword in keywords):
                 og_tweet_id = tweet.in_reply_to_status_id
-                og_tweet_content = api.get_status(og_tweet_id)
+                og_tweet_meta = api.get_status(og_tweet_id)
+                og_tweet_content = str(og_tweet_meta.text)
                 # If og_tweet_content is longer than 260 characters then truncate to prevent from exceeding Twitter's character limit
                 if len(str(og_tweet_content.text)) > 260:
-                    og_tweet_content = truncate(str(og_tweet_content.text))
-                altcase_tweet_content = altcase(str(og_tweet_content.text))
-                logger.info(f"Original content: {og_tweet_content.text}, AltCase content: {altcase_tweet_content}")
+                    og_tweet_content = truncate(og_tweet_content)
+                altcase_tweet_content = altcase(og_tweet_content)
+                logger.info(f"Original content: {og_tweet_content}, AltCase content: {altcase_tweet_content}")
                 logger.info(f"Answering to {tweet.user.name}, username {tweet.user.screen_name}")
                 api.update_status(status=altcase_tweet_content + "-@/" + tweet.in_reply_to_screen_name,
                                   in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
