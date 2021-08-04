@@ -21,6 +21,8 @@ Then, navigate to the directory you downloaded this and simply type:
 python main.py
 ```
 into your terminal. The bot will automatically authenticates to Twitter using the "consumer_key", "consumer_secret", "access_token" and "access_token_secret" that you given earlier.
+## Twitter account
+You can visit the [Twitter account](https://twitter.com/alt_case) this bot was first hosted on.
 ## Feedbacks and Contributions
 As mentioned above, this program is very unstable so any feedback and contributions is welcomed.
 ## Acknowledgements
