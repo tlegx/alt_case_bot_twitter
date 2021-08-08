@@ -30,7 +30,7 @@ def check_mentions(api, keywords, since_id):
                 og_tweet_meta = api.get_status(og_tweet_id)
                 og_tweet_content = str(og_tweet_meta.text)
                 # If og_tweet_content is longer than 260 characters then truncate to prevent from exceeding Twitter's character limit
-                if len(str(og_tweet_content.text)) > 260:
+                if len(str(og_tweet_content)) > 260:
                     og_tweet_content = truncate(og_tweet_content)
                 if str(tweet.in_reply_to_screen_name) == "tlegx_" or "alt_case":
                     api.update_status(status="no" + tweet.in_reply_to_screen_name,
