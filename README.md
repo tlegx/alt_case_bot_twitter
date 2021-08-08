@@ -4,6 +4,8 @@
   <img alt="AppVeyor" src="https://img.shields.io/badge/Language-Python-informational?color=blue">
   <a href="https://github.com/tlegx/alt_case_bot_twitter/releases/tag/v0.0.0-alpha">
     <img alt="AppVeyor" src="https://img.shields.io/badge/Version-v0.0.0 alpha-informational?color=orange">
+    
+  ![example workflow](https://github.com/tlegx/alt_case_bot_twitter/actions/workflows/codeql-analysis.yml/badge.svg)
   </a>
 </p>
 
