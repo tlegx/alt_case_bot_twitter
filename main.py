@@ -21,7 +21,7 @@ def check_mentions(api, keywords, since_id):
         # If the user mentioned the bot in a tweet (not a reply) the bot responds with an error
         if tweet.in_reply_to_status_id is None:
             api.update_status(
-                status="@" + tweet.user.screen_name + " Tweet ID: " + str(tweet.id) + " Alternative Case Bot Error 01: This bot does not support mentioning straight from a tweet. For more information, visit: https://tlegx.rf.gd",
+                status="@" + tweet.user.screen_name + " Tweet ID: " + str(tweet.id) + ". Alternative Case Bot Error 01: This bot does not support mentioning straight from a tweet. For more information, visit: https://tlegx.rf.gd",
                 in_reply_to_status_id=tweet.id)
         # If the user mentioned the bot in a reply, convert og_tweet_content to alternative case, then reply to the user who mentioned the bot earlier
         else:
@@ -32,8 +32,9 @@ def check_mentions(api, keywords, since_id):
                 # If og_tweet_content is longer than 260 characters then truncate to prevent from exceeding Twitter's character limit
                 if len(str(og_tweet_content)) > 260:
                     og_tweet_content = truncate(og_tweet_content)
+		# If the user attempts to 'alt_case' the author, the bot responds with an error (optional)
                 if str(tweet.in_reply_to_screen_name) == "tlegx_" or "alt_case":
-                    api.update_status(status="no" + tweet.in_reply_to_screen_name,
+                    api.update_status(status="Tweet ID: " + str(tweet.id) + ". Alternative Case Bot Error 02: You cannot make the author of this bot feel the pain" + tweet.in_reply_to_screen_name,
                                       in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
                 else:
                     altcase_tweet_content = altcase(og_tweet_content)
