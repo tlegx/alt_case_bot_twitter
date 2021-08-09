@@ -34,7 +34,7 @@ def check_mentions(api, keywords, since_id):
                     og_tweet_content = truncate(og_tweet_content)
 		# If the user attempts to 'alt_case' the author, the bot responds with an error (optional)
                 if str(tweet.in_reply_to_screen_name) == "tlegx_" or "alt_case":
-                    api.update_status(status="Tweet ID: " + str(tweet.id) + ". Alternative Case Bot Error 02: You cannot make the author of this bot feel the pain. + tweet.in_reply_to_screen_name,
+                    api.update_status(status="Tweet ID: " + str(tweet.id) + ". Alternative Case Bot Error 02: You cannot make the author of this bot feel the pain." + tweet.in_reply_to_screen_name,
                                       in_reply_to_status_id=tweet.id, auto_populate_reply_metadata=True)
                 else:
                     altcase_tweet_content = altcase(og_tweet_content)
