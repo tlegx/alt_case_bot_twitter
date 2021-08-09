@@ -14,6 +14,7 @@ A Twitter bot that creates an alternative case version of the tweet you're reply
 Every 20 seconds, check for mentions in mentions_timeline. If found, reply to the user who mentioned the bot with an alternative case version of the tweet they are replying to
 ## Using the bot
 ***WARNING: THIS PROGRAM IS IN AN ALPHA STATE AND IS NOT INTENDED FOR PUBLIC USE YET. ONLY USE THIS PROGRAM IF YOU KNOW WHAT YOU ARE DOING. YOU HAVE BEEN WARNED***
+
 ***DISCLAIMER: BY USING THIS PROGRAM, YOU AGREE THAT THE AUTHOR OF THIS PROGRAM IS NOT RESPONSIBLE FOR ANY LOSSES, DAMAGES OR ANYTHING DONE BY THIS PROGRAM***
 
 **Make sure you have installed the *[Python interpreter](https://python.org)* and had a *[Twitter developer account](https://developers.twitter.com)* before continuing**
